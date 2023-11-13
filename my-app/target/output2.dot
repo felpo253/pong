@@ -1,0 +1,84 @@
+strict digraph sbom {
+	size="8,10.5"; ratio=fill;
+	"fxgl" [shape=box, style=filled, fontcolor=white, fillcolor=darkred label="fxgl
+MIT"];
+	"javafx-fxml" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="javafx-fxml
+GPL-2.0-with-classpath-exception"];
+	"fxgl" -> "javafx-fxml";
+	"fxgl-core" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="fxgl-core
+MIT"];
+	"fxgl" -> "fxgl-core";
+	"fxgl-io" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="fxgl-io
+MIT"];
+	"fxgl" -> "fxgl-io";
+	"fxgl-entity" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="fxgl-entity
+MIT"];
+	"fxgl" -> "fxgl-entity";
+	"fxgl-scene" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="fxgl-scene
+MIT"];
+	"fxgl" -> "fxgl-scene";
+	"fxgl-gameplay" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="fxgl-gameplay
+MIT"];
+	"fxgl" -> "fxgl-gameplay";
+	"jackson-databind" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="jackson-databind
+Apache-2.0"];
+	"fxgl" -> "jackson-databind";
+	"lifecycle" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="lifecycle
+GPL-3.0-only"];
+	"fxgl" -> "lifecycle";
+	"kotlin-stdlib" [shape=box, style=filled, fontcolor=white, fillcolor=royalblue label="kotlin-stdlib
+Apache-2.0"];
+	"fxgl" -> "kotlin-stdlib";
+	"javafx-controls" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="javafx-controls
+GPL-2.0-with-classpath-exception"];
+	"javafx-fxml" -> "javafx-controls";
+	"javafx-graphics" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="javafx-graphics
+GPL-2.0-with-classpath-exception"];
+	"javafx-controls" -> "javafx-graphics";
+	"javafx-base" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="javafx-base
+GPL-2.0-with-classpath-exception"];
+	"javafx-graphics" -> "javafx-base";
+	"fxgl-core" -> "javafx-graphics";
+	"javafx-media" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="javafx-media
+GPL-2.0-with-classpath-exception"];
+	"fxgl-core" -> "javafx-media";
+	"audio" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="audio
+GPL-3.0-only"];
+	"fxgl-core" -> "audio";
+	"fxgl-core" -> "kotlin-stdlib";
+	"javafx-media" -> "javafx-graphics";
+	"util" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="util
+GPL-3.0-only"];
+	"audio" -> "util";
+	"storage" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="storage
+GPL-3.0-only"];
+	"audio" -> "storage";
+	"storage" -> "util";
+	"kotlin-stdlib-common" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="kotlin-stdlib-common
+Apache-2.0"];
+	"kotlin-stdlib" -> "kotlin-stdlib-common";
+	"annotations" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="annotations
+Apache-2.0"];
+	"kotlin-stdlib" -> "annotations";
+	"fxgl-io" -> "fxgl-core";
+	"fxgl-io" -> "storage";
+	"fxgl-io" -> "util";
+	"fxgl-io" -> "kotlin-stdlib";
+	"fxgl-entity" -> "fxgl-core";
+	"fxgl-entity" -> "kotlin-stdlib";
+	"fxgl-scene" -> "javafx-controls";
+	"fxgl-scene" -> "fxgl-core";
+	"fxgl-scene" -> "kotlin-stdlib";
+	"fxgl-gameplay" -> "fxgl-core";
+	"fxgl-gameplay" -> "fxgl-scene";
+	"fxgl-gameplay" -> "javafx-controls";
+	"jackson-annotations" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="jackson-annotations
+Apache-2.0"];
+	"fxgl-gameplay" -> "jackson-annotations";
+	"fxgl-gameplay" -> "kotlin-stdlib";
+	"jackson-databind" -> "jackson-annotations";
+	"jackson-core" [shape=box, style=filled, fontcolor=white, fillcolor=darkgreen label="jackson-core
+Apache-2.0"];
+	"jackson-databind" -> "jackson-core";
+	"lifecycle" -> "util";
+}
